@@ -54,6 +54,7 @@ dependencies {
     // Third Party
     implementation "com.squareup.retrofit2:retrofit:$versions.retrofit"
     api "com.squareup.retrofit2:converter-moshi:$versions.retrofit"
+    api "com.squareup.okhttp3:okhttp:$versions.okhttp3"
     api "com.squareup.okhttp3:logging-interceptor:$versions.okhttp3"
     kapt "com.squareup.moshi:moshi-kotlin-codegen:$versions.moshi"
 

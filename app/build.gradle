@@ -2,7 +2,6 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
-    id 'com.google.gms.google-services'
 }
 
 android {
@@ -34,11 +33,11 @@ android {
         dataBinding = true
     }
 
-    externalNativeBuild {
-        ndkBuild {
-            path 'src/main/jni/Android.mk'
-        }
-    }
+//    externalNativeBuild {
+//        ndkBuild {
+//            path 'src/main/jni/Android.mk'
+//        }
+//    }
 
     kotlinOptions {
         jvmTarget = "1.8"
@@ -82,5 +81,16 @@ dependencies {
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.kotlinxCoroutines"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$versions.kotlinxCoroutines"
     testImplementation "org.mockito:mockito-inline:$versions.mockitoInline"
+
+    // Third Party
+    implementation "com.github.bumptech.glide:glide:$versions.glide"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    kapt "com.github.bumptech.glide:compiler:$versions.glide"
+    implementation "com.github.skydoves:baserecyclerviewadapter:$versions.adapter"
+    implementation "com.jakewharton.timber:timber:$versions.timber"
+    implementation "org.koin:koin-android:$versions.koin"
+    implementation "org.koin:koin-android-scope:$versions.koin"
+    implementation "org.koin:koin-android-viewmodel:$versions.koin"
+    implementation "org.koin:koin-androidx-fragment:$versions.koin"
 
 }
