@@ -51,6 +51,10 @@ android {
 
 dependencies {
 
+    // Module
+    implementation project(path: ':network')
+    implementation project(path: ':entity')
+
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$versions.kotlin"
 
