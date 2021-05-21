@@ -1,0 +1,77 @@
+ext.versions = [
+        // configurations
+        minSdk                : 21,
+        compileSdk            : 30,
+        buildTools            : "30.0.3",
+        versionCode           : 1,
+        versionName           : '1.0',
+
+        // gradle
+        gradleBuildTool       : '4.1.1',
+
+        // kotlin
+        kotlin                : '1.4.21',
+
+        appcompat             : '1.2.0',
+        constraintlayout      : '2.0.4',
+        androidxJunit         : '1.1.2',
+        junit                 : '4.13.1',
+        recyclerview          : '1.1.0',
+        annotation            : '1.1.0',
+        coreKtx               : '1.3.2',
+
+        // lifecycle
+        lifecycle             : '2.2.0',
+
+        // networking
+        retrofit              : '2.9.0',
+        okhttp3               : '4.9.0',
+
+        // glide
+        glide                 : '4.11.0',
+
+        // dependency injection
+        koin                  : '2.2.2',
+
+        // navigation
+        navigation            : '2.3.2',
+
+        // adapter
+        adapter               : '0.1.3',
+
+        // testing
+        mockitoKotlin         : '2.2.0',
+        mockitoInline         : '3.6.28',
+        archCoreTesting       : '2.1.0',
+        espresso              : '3.3.0',
+        roboelectric          : '4.4',
+
+        // coroutines
+        kotlinxCoroutines     : '1.4.2',
+
+        // moshi
+        moshi                 : '1.11.0',
+
+        // date persistent
+        room                  : '2.2.6',
+
+        // google services
+        googleServices        : '4.3.4',
+        firebaseBoM           : '26.2.0',
+        material              : '1.3.0-rc01',
+
+        // animation
+        lottieAnimationVersion: '3.4.1',
+
+        // custom views
+        loadingButtonVersion  : '1.14.0',
+
+        // logging
+        timber                : '4.7.1',
+
+        // language
+        lingver               : '1.3.0',
+
+        // runtime permission
+        permissionDispatcher  : '3.3.1',
+]
