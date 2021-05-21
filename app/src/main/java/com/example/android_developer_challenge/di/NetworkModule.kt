@@ -1,6 +1,7 @@
 package com.example.android_developer_challenge.di
 
 import com.example.network.constants.ConnectionURL
+import com.example.network.services.GithubUserService
 import com.example.network.setup.NetworkResponseFactory
 import com.example.network.setup.RequestInterceptor
 import okhttp3.OkHttpClient
@@ -33,5 +34,5 @@ val networkModule = module {
             .build()
     }
 
-    //single { get<Retrofit>().create(MovieService::class.java) }
+    single { get<Retrofit>().create(GithubUserService::class.java) }
 }

@@ -1,5 +1,5 @@
 package com.example.network.constants
 
 object ConnectionURL {
-    const val BASE_URL = "https://api.themoviedb.org/"
+    const val BASE_URL = "https://api.github.com"
 }

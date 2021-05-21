@@ -1,6 +1,7 @@
 package com.example.network.setup
 
 
+import android.util.Log
 import com.example.network.constants.ConnectionFlag.NO_AUTH_HEADER
 import com.example.network.services.AuthTokenService
 import okhttp3.HttpUrl
@@ -14,8 +15,8 @@ class RequestInterceptor : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
         var originalRequest = chain.request()
 
-        val url: HttpUrl = originalRequest.url.newBuilder()
-            .addQueryParameter("api_key", "6ddf1da8ede343f82786973e2dd7c457").build()
+        val url: HttpUrl = originalRequest.url.newBuilder().build()
+
         originalRequest = originalRequest.newBuilder().url(url).build()
 
         if (originalRequest.headers(NO_AUTH_HEADER).isNotEmpty()) {
@@ -32,6 +33,7 @@ class RequestInterceptor : Interceptor {
         }
 
         val request = requestBuilder.build()
+        Log.d("request", "send request ${request.url}")
         return chain.proceed(request)
     }
 }

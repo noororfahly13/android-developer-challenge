@@ -5,7 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import android.provider.Settings
 import androidx.fragment.app.Fragment
-import com.example.android_developer_challenge.ui.MainActivity
+import com.example.android_developer_challenge.ui.home.MainActivity
 
 object FireIntent {
 

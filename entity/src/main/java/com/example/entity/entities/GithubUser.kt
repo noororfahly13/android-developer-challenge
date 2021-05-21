@@ -8,8 +8,8 @@ import com.squareup.moshi.JsonClass
 @Entity
 data class GithubUser(
     @PrimaryKey val id: Int,
-    val image: String?,
+    val avatar_url: String?,
     val name: String?,
-    val userName: String?,
+    val login: String?,
     val bio: String?
 )
