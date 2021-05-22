@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
+        <variable
+            name="adapter"
+            type="com.example.android_developer_challenge.ui.home.adapter.GithubUserAdapter" />
+
+        <variable
+            name="layoutManager"
+            type="androidx.recyclerview.widget.RecyclerView.LayoutManager" />
+
+        <variable
+            name="viewModel"
+            type="com.example.android_developer_challenge.ui.home.viewmodel.MainViewModel" />
 
     </data>
 
@@ -10,6 +22,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.home.MainActivity">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/usersRV"
+            adapter="@{adapter}"
+            adapterUserList="@{viewModel.githubUsersResource}"
+            layoutManager="@{layoutManager}"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

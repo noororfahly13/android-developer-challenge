@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.android_developer_challenge.ui.details.viewmodel.DetailsViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/detailsML"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layoutDescription="@xml/scene_details_collapsing_toolbar">
+
+        <ImageView
+            android:id="@+id/userIV"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/grayLight"
+            android:scaleType="centerCrop"
+            app:image="@{viewModel.image}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:contentInsetStart="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetEnd="0dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetEndWithActions="0dp"
+            android:contentInsetStartWithNavigation="0dp"
+            app:contentInsetEnd="0dp"
+            app:contentInsetEndWithActions="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/backIV"
+                    android:layout_width="66dp"
+                    android:layout_height="58dp"
+                    android:gravity="center"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_arrow_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/toolbarTitleTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="58dp"
+                    android:layout_marginStart="16dp"
+                    android:gravity="start|center_vertical"
+                    android:text="@{viewModel.login}"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x_large"
+                    app:layout_collapseMode="parallax"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/backIV"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userIV">
+
+            <LinearLayout
+                android:id="@+id/dataLL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/layout_title_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="28dp"
+                    app:title="@{@string/full_name}"
+                    app:value="@{viewModel.name}" />
+
+                <include
+                    layout="@layout/layout_title_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    app:title="@{@string/company}"
+                    app:value="@{viewModel.company}" />
+
+                <include
+                    layout="@layout/layout_title_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    app:title="@{@string/location}"
+                    app:value="@{viewModel.location}" />
+
+                <include
+                    layout="@layout/layout_title_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    app:title="@{@string/email}"
+                    app:value="@{viewModel.email}" />
+
+                <include
+                    layout="@layout/layout_title_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    app:title="@{@string/public_repos}"
+                    app:value="@{viewModel.publicRepos}" />
+
+                <include
+                    layout="@layout/layout_title_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    app:title="@{@string/followers_count}"
+                    app:value="@{viewModel.followersCount}" />
+
+                <include
+                    layout="@layout/layout_title_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    app:title="@{@string/following_count}"
+                    app:value="@{viewModel.followingCount}" />
+
+                <include
+                    layout="@layout/layout_title_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginBottom="32dp"
+                    app:title="@{@string/bio}"
+                    app:value="@{viewModel.bio}" />
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</layout>

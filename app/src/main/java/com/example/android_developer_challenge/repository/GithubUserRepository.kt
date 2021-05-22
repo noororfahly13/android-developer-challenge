@@ -11,7 +11,11 @@ class GithubUserRepository constructor(
     private val githubUserDomain: GithubUserDomain
 ) {
 
-    fun searchGithubUsers(): Flow<Resource<ArrayList<GithubUser>>> {
-        return githubUserDomain.searchGithubUsers()
+    fun searchGithubUsers(query: String): Flow<Resource<ArrayList<GithubUser>>> {
+        return githubUserDomain.searchGithubUsers(query)
+    }
+
+    fun fetchGithubUser(login: String): Flow<Resource<GithubUser>> {
+        return githubUserDomain.fetchGithubUser(login)
     }
 }

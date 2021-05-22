@@ -22,10 +22,10 @@ class MainViewModel constructor(
     init {
     }
 
-    fun searchGithubUsers() {
+    fun searchGithubUsers(query: String) {
 
         viewModelScope.launch(context = context) {
-            collect(githubUserRepository.searchGithubUsers()) { result ->
+            collect(githubUserRepository.searchGithubUsers(query)) { result ->
                 githubUsersResource.value = result
                 result.data?.let { users ->
                     Timber.v("Got results ${users.size}")
