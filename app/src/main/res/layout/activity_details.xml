@@ -21,11 +21,11 @@
             android:id="@+id/userIV"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:background="@color/grayLight"
+            android:background="@color/purple_700"
             android:scaleType="centerCrop"
             app:image="@{viewModel.image}"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHeight_percent="0.3"
+            app:layout_constraintHeight_percent="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -104,7 +104,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
-                    android:layout_marginTop="28dp"
                     app:title="@{@string/full_name}"
                     app:value="@{viewModel.name}" />
 

@@ -1,16 +1,10 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="108dp"
-    android:height="108dp"
-    android:viewportWidth="108"
-    android:viewportHeight="108">
-  <group
-      android:scaleX="0.691875"
-      android:scaleY="0.691875"
-      android:translateX="31.86"
-      android:translateY="31.86">
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
     <path
-        android:fillColor="#3700B3"
+        android:fillColor="@color/purple_700"
         android:fillType="evenOdd"
         android:pathData="M44.0461,41.2185C47.3463,37.2813 49.3333,32.206 49.3333,26.6667C49.3333,14.1482 39.1851,4 26.6667,4C14.1482,4 4,14.1482 4,26.6667C4,39.1851 14.1482,49.3333 26.6667,49.3333C32.206,49.3333 37.2813,47.3463 41.2185,44.0461C41.2297,44.0578 41.241,44.0694 41.2524,44.0809L54.5858,57.4142C55.3668,58.1953 56.6332,58.1953 57.4142,57.4142C58.1953,56.6332 58.1953,55.3668 57.4142,54.5858L44.0809,41.2525C44.0694,41.241 44.0578,41.2297 44.0461,41.2185ZM45.3333,26.6667C45.3333,36.976 36.976,45.3333 26.6667,45.3333C16.3574,45.3333 8,36.976 8,26.6667C8,16.3574 16.3574,8 26.6667,8C36.976,8 45.3333,16.3574 45.3333,26.6667Z" />
-  </group>
 </vector>

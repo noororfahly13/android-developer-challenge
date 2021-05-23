@@ -5,4 +5,5 @@
     <dimen name="normal">16sp</dimen>
     <dimen name="large">18sp</dimen>
     <dimen name="x_large">20sp</dimen>
+    <dimen name="x_x_large">24sp</dimen>
 </resources>

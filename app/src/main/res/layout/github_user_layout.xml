@@ -21,7 +21,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
-        android:background="@color/white"
+        android:background="@color/semiWhite"
         android:outlineAmbientShadowColor="@color/shadowBlueAlpha60"
         android:outlineSpotShadowColor="@color/shadowBlueAlpha60"
         android:translationZ="20dp"

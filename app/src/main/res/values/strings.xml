@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Android-Developer-Challenge</string>
+    <string name="app_name">Android Developer Challenge</string>
     <string name="error_no_internet">No connection, please check your phone settings</string>
     <string name="error_session_expired">Session expired</string>
     <string name="error_connection_error">Connection error</string>
@@ -11,4 +11,7 @@
     <string name="public_repos">Public repos count:</string>
     <string name="followers_count">Followers count:</string>
     <string name="following_count">Following count:</string>
+    <string name="header_title">Github Users Locator</string>
+    <string name="search_hint">Search...</string>
+    <string name="empty_list_hint">Start by clicking search icon and writing who you are searching for</string>
 </resources>
