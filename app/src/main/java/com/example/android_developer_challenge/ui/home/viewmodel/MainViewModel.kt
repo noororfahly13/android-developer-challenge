@@ -12,7 +12,7 @@ import timber.log.Timber
 import java.util.*
 import kotlin.coroutines.CoroutineContext
 
-class MainViewModel constructor(
+open class MainViewModel constructor(
     private val githubUserRepository: GithubUserRepository,
     private val context: CoroutineContext = Dispatchers.Main
 ) : BaseViewModel() {

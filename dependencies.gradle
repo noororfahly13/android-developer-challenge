@@ -19,6 +19,8 @@ ext.versions = [
         recyclerview          : '1.1.0',
         annotation            : '1.1.0',
         coreKtx               : '1.3.2',
+        material              : '1.3.0',
+        legacySupport         : '1.0.0',
 
         // lifecycle
         lifecycle             : '2.2.0',
@@ -40,11 +42,12 @@ ext.versions = [
         adapter               : '0.1.3',
 
         // testing
-        mockitoKotlin         : '2.2.0',
-        mockitoInline         : '3.6.28',
+        mockitoKotlin         : '3.2.0',
+        mockito               : '3.6.28',
         archCoreTesting       : '2.1.0',
         espresso              : '3.3.0',
         roboelectric          : '4.4',
+        testRunner            : '1.3.0',
 
         // coroutines
         kotlinxCoroutines     : '1.4.2',

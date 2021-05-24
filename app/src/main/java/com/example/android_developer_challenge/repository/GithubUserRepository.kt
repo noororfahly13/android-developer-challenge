@@ -6,7 +6,7 @@ import com.example.entity.entities.GithubUser
 import com.example.network.vo.Resource
 import kotlinx.coroutines.flow.Flow
 
-class GithubUserRepository constructor(
+open class GithubUserRepository constructor(
     val githubUserDao: GithubUserDao,
     private val githubUserDomain: GithubUserDomain
 ) {
