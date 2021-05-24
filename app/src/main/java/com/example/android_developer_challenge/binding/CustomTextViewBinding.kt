@@ -22,7 +22,7 @@ fun bindIsEmptyListHintVisible(
     users: Resource<List<GithubUser>?>?,
     isInSearchMode: Boolean?
 ) {
-    if (isInSearchMode != true && (users == null || users.status == Status.ERROR))
+    if (isInSearchMode != true && (users == null || users.dataIsNull() || users.data.isNullOrEmpty() || users.status == Status.ERROR))
         view.visible()
     else
         view.gone()

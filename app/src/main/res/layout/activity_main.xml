@@ -26,16 +26,33 @@
         android:animateLayoutChanges="true"
         tools:context=".ui.home.MainActivity">
 
+        <TextView
+            android:id="@+id/headerTV"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="start|center_vertical"
+            android:includeFontPadding="false"
+            android:text="@string/header_title"
+            android:textAlignment="gravity"
+            android:textColor="@color/purple_700"
+            android:textSize="@dimen/x_large"
+            android:visibility="@{viewModel.isInSearchMode ? View.GONE : View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="@id/searchBar"
+            app:layout_constraintEnd_toStartOf="@id/searchBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/searchBar" />
+
         <include
             android:id="@+id/searchBar"
             layout="@layout/layout_search_bar"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:viewModel="@{viewModel}" />
 

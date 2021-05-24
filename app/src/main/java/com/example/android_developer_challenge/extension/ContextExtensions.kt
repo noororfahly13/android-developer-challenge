@@ -1,6 +1,8 @@
 package com.example.android_developer_challenge.extension
 
 import android.content.Context
+import android.graphics.Point
+import android.view.WindowManager
 import android.widget.Toast
 import androidx.annotation.ColorRes
 import androidx.core.content.ContextCompat
@@ -32,4 +34,20 @@ fun Context.showDialog(
         dialog.dismiss()
     }
     builder.show()
+}
+
+fun Context.getScreenWidth(): Int {
+    val windowManager = getSystemService(Context.WINDOW_SERVICE) as WindowManager
+    val display = windowManager.defaultDisplay
+    val size = Point()
+    display.getSize(size)
+    return size.x
+}
+
+fun Context.getScreenHeight(): Int {
+    val windowManager = getSystemService(Context.WINDOW_SERVICE) as WindowManager
+    val display = windowManager.defaultDisplay
+    val size = Point()
+    display.getSize(size)
+    return size.y
 }

@@ -8,10 +8,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.android_developer_challenge.R
 import com.example.android_developer_challenge.base.BaseActivity
 import com.example.android_developer_challenge.databinding.ActivityMainBinding
-import com.example.android_developer_challenge.extension.hideKeyboard
-import com.example.android_developer_challenge.extension.observeLiveData
-import com.example.android_developer_challenge.extension.showKeyboard
-import com.example.android_developer_challenge.extension.textChanges
+import com.example.android_developer_challenge.extension.*
 import com.example.android_developer_challenge.ui.home.adapter.GithubUserAdapter
 import com.example.android_developer_challenge.ui.home.viewholder.GithubUserViewHolder
 import com.example.android_developer_challenge.ui.home.viewmodel.MainViewModel
@@ -41,8 +38,14 @@ class MainActivity : BaseActivity<MainViewModel>(), GithubUserViewHolder.Delegat
             lifecycleOwner = this@MainActivity
             layoutManager = GridLayoutManager(this@MainActivity, 2)
             adapter = GithubUserAdapter(this@MainActivity)
-        }
 
+            Looper.myLooper()?.let {
+                Handler(it).postDelayed({
+                    searchBar.searchET.width =
+                        getScreenWidth() - 112.toPx() // set the width of the edit text to screen width minus the horizontal margin and padding
+                }, 10)
+            }
+        }
         binding.searchBar.trailingIconIV.setOnClickListener {
             viewModel.toggleSearchMode()
         }
