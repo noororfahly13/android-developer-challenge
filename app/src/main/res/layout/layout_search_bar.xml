@@ -11,56 +11,53 @@
 
     </data>
 
-    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:elevation="0dp"
-        app:cardCornerRadius="24dp"
-        app:cardElevation="0dp"
-        app:strokeColor="@color/purple_700"
-        app:strokeWidth="1dp">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@drawable/bg_search"
+        android:orientation="vertical"
+        android:paddingTop="44dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <TextView
+            android:id="@+id/headerTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="48dp"
+            android:gravity="start|center_vertical"
+            android:includeFontPadding="false"
+            android:text="@string/header_title"
+            android:textAlignment="gravity"
+            android:textColor="@color/purple"
+            android:textSize="@dimen/large"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/searchET"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_vertical">
-
-            <ImageView
-                android:id="@+id/trailingIconIV"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:scaleType="center"
-                app:drawable="@{viewModel.isInSearchMode ? @drawable/ic_close : @drawable/ic_search}"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <EditText
-                android:id="@+id/searchET"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="@color/white"
-                android:cursorVisible="true"
-                android:drawablePadding="10dp"
-                android:ellipsize="end"
-                android:focusableInTouchMode="true"
-                android:gravity="start|center_vertical"
-                android:hint="@string/search_hint"
-                android:imeOptions="actionDone"
-                android:includeFontPadding="false"
-                android:inputType="text"
-                android:maxLines="1"
-                android:textAlignment="gravity"
-                android:textColor="@color/grayDark"
-                android:textColorHint="@color/grayLight"
-                android:textSize="@dimen/x_large"
-                android:visibility="@{viewModel.isInSearchMode ? View.VISIBLE : View.GONE}"
-                app:layout_constraintBottom_toBottomOf="@id/trailingIconIV"
-                app:layout_constraintEnd_toStartOf="@id/trailingIconIV"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/trailingIconIV" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.card.MaterialCardView>
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_search_text"
+            android:cursorVisible="true"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="10dp"
+            android:ellipsize="end"
+            android:gravity="start|center_vertical"
+            android:hint="@string/search_hint"
+            android:imeOptions="actionDone"
+            android:includeFontPadding="false"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
+            android:textAlignment="gravity"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grayDark"
+            android:textSize="@dimen/medium" />
+    </LinearLayout>
 </layout>

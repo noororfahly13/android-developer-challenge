@@ -2,7 +2,7 @@ package com.example.android_developer_challenge.ui.home.viewholder
 
 import android.view.View
 import com.example.android_developer_challenge.binding.bindings
-import com.example.android_developer_challenge.databinding.GithubUserLayoutBinding
+import com.example.android_developer_challenge.databinding.LayoutGithubUserBinding
 import com.example.android_developer_challenge.extension.setOnClickListener
 import com.example.entity.entities.GithubUser
 import com.skydoves.baserecyclerviewadapter.BaseViewHolder
@@ -18,7 +18,7 @@ class GithubUserViewHolder(
 
     lateinit var githubUser: GithubUser
 
-    private val binding by bindings<GithubUserLayoutBinding>(
+    private val binding by bindings<LayoutGithubUserBinding>(
         view
     )
 

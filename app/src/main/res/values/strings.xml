@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">Android Developer Challenge</string>
+    <string name="app_name">Github User Locator </string>
     <string name="error_no_internet">No connection, please check your phone settings</string>
     <string name="error_session_expired">Session expired</string>
     <string name="error_connection_error">Connection error</string>
+    <string name="login">Login</string>
     <string name="full_name">Full name:</string>
     <string name="bio">Bio:</string>
     <string name="company">Company:</string>
@@ -12,6 +13,8 @@
     <string name="followers_count">Followers count:</string>
     <string name="following_count">Following count:</string>
     <string name="header_title">Github Users Locator</string>
-    <string name="search_hint">Search...</string>
-    <string name="empty_list_hint">Start by clicking search icon and writing who you are searching for</string>
+    <string name="search_hint">Search for a user name</string>
+    <string name="empty_list_title">Nothing Here Yet</string>
+    <string name="empty_list_hint">Search for users on github by username</string>
+    <string name="find_me">Find Me</string>
 </resources>

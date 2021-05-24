@@ -19,8 +19,6 @@ open class MainViewModel constructor(
 
     var githubUsersResource: MutableLiveData<Resource<ArrayList<GithubUser>>> = MutableLiveData()
 
-    var isInSearchMode = MutableLiveData(false)
-
     init {
     }
 
@@ -37,10 +35,5 @@ open class MainViewModel constructor(
             }
 
         }
-    }
-
-    fun toggleSearchMode() {
-        val isInSearchModeVal = isInSearchMode.value
-        isInSearchMode.value = isInSearchModeVal?.not() ?: false
     }
 }

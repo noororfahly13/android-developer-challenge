@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.android_developer_challenge.ui.home.viewmodel.MainViewModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:isEmptyStateVisible="@{viewModel.githubUsersResource}">
+
+        <ImageView
+            android:id="@+id/logoIconIV"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_foreground"
+            app:tint="@color/grayDark" />
+
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginEnd="48dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/empty_list_title"
+            android:textAlignment="gravity"
+            android:textColor="@color/black"
+            android:textSize="@dimen/large"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/hintTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/empty_list_hint"
+            android:textAlignment="gravity"
+            android:textColor="@color/black"
+            android:textSize="@dimen/normal" />
+
+    </LinearLayout>
+
+</layout>

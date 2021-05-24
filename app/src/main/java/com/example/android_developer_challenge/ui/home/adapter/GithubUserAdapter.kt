@@ -21,7 +21,7 @@ class GithubUserAdapter(private val delegate: GithubUserViewHolder.Delegate) : B
         }
     }
 
-    override fun layout(sectionRow: SectionRow) = R.layout.github_user_layout
+    override fun layout(sectionRow: SectionRow) = R.layout.layout_github_user
 
     override fun viewHolder(layout: Int, view: View) = GithubUserViewHolder(view, delegate)
 

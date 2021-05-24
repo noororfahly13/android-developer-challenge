@@ -1,5 +1,6 @@
 package com.example.android_developer_challenge.ui.details
 
+import android.view.WindowManager
 import com.example.android_developer_challenge.R
 import com.example.android_developer_challenge.base.BaseActivity
 import com.example.android_developer_challenge.databinding.ActivityDetailsBinding
@@ -36,6 +37,11 @@ class DetailsActivity : BaseActivity<DetailsViewModel>() {
         intent.getStringExtra(LOGIN_ARGUMENT)?.let {
             viewModel.fetchGithubUser(it)
         }
+
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+        )
 
     }
 

@@ -2,6 +2,8 @@ package com.example.android_developer_challenge.binding
 
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.android_developer_challenge.extension.gone
+import com.example.android_developer_challenge.extension.visible
 import com.example.android_developer_challenge.ui.home.adapter.GithubUserAdapter
 import com.example.entity.entities.GithubUser
 import com.example.network.vo.Resource
@@ -20,7 +22,9 @@ fun bindLayoutManager(view: RecyclerView, layoutManager: RecyclerView.LayoutMana
 @BindingAdapter("adapterUserList")
 fun bindAdapterUserList(view: RecyclerView, users: Resource<List<GithubUser>?>?) {
     users?.data?.let {
-        if (it.isNotEmpty())
-            (view.adapter as? GithubUserAdapter)?.addUserList(it)
+        (view.adapter as? GithubUserAdapter)?.addUserList(it)
+        view.visible()
+        return
     }
+    view.gone()
 }

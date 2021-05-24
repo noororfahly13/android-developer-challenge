@@ -8,7 +8,9 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.android_developer_challenge.R
 import com.example.android_developer_challenge.base.BaseActivity
 import com.example.android_developer_challenge.databinding.ActivityMainBinding
-import com.example.android_developer_challenge.extension.*
+import com.example.android_developer_challenge.extension.getScreenWidth
+import com.example.android_developer_challenge.extension.textChanges
+import com.example.android_developer_challenge.extension.toPx
 import com.example.android_developer_challenge.ui.home.adapter.GithubUserAdapter
 import com.example.android_developer_challenge.ui.home.viewholder.GithubUserViewHolder
 import com.example.android_developer_challenge.ui.home.viewmodel.MainViewModel
@@ -44,26 +46,6 @@ class MainActivity : BaseActivity<MainViewModel>(), GithubUserViewHolder.Delegat
                     searchBar.searchET.width =
                         getScreenWidth() - 112.toPx() // set the width of the edit text to screen width minus the horizontal margin and padding
                 }, 10)
-            }
-        }
-        binding.searchBar.trailingIconIV.setOnClickListener {
-            viewModel.toggleSearchMode()
-        }
-
-        observeLiveData(viewModel.isInSearchMode) { isInSearchMode ->
-            Looper.myLooper()?.let {
-                if (isInSearchMode) {
-                    Handler(it).postDelayed({
-                        binding.searchBar.searchET.requestFocus()
-                        binding.searchBar.searchET.showKeyboard()
-                    }, 50)
-                } else {
-                    Handler(it).postDelayed({
-                        binding.root.clearFocus()
-                        binding.searchBar.searchET.text.clear()
-                        binding.searchBar.searchET.hideKeyboard()
-                    }, 50)
-                }
             }
         }
 
